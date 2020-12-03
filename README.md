@@ -1,1 +1,1 @@
-# VSCode launch.json Example for Multi-Repository Workspace
+# VSCode launch.json Example for Multi-Project / Multi-Repository Workspace
