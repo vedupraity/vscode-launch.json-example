@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Sample Django Project",
+            "type": "python",
+            "cwd": "${workspaceFolder}/SampleDjango",
+            "request": "launch",
+            "python": "${workspaceFolder}/SampleDjango/venv/bin/python",
+            "program": "${workspaceFolder}/SampleDjango/manage.py",
+            "args": [
+                "runserver",
+                "8000"
+            ],
+            "env": {
+                "DATABASE_HOST": "localhost",
+                "DATABASE_PORT": "5432",
+                "DATABASE_NAME": "sampledb",
+                "DATABASE_PASSWORD": "S@mpl3P@$$w0rd+"
+            },
+            "django": true
+        },
+        {
+            "name": "Sample Celery Worker",
+            "type": "python",
+            "cwd": "${workspaceFolder}/SampleCelery",
+            "request": "launch",
+            "python": "${workspaceFolder}/SampleCelery/venv/bin/python",
+            "program": "${workspaceFolder}/SampleCelery/venv/bin/celery",
+            "args": [
+                "-A",
+                "sample_celery_app",
+                "worker",
+                "--loglevel=info"
+            ],
+            "envFile": "${workspaceFolder}/SampleCelery/.env",
+            "django": true
+        }
+    ]
+}
